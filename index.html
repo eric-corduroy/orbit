@@ -13,12 +13,15 @@
     }
 
     /* Full-screen fixed background (B/W) */
-    body {
+    html, body {
       margin: 0;
       padding: 0;
       width: 100vw;
       height: 100vh;
       overflow: hidden; /* prevent scrolling */
+    }
+
+    body {
       font-family: "VictorSerif", system-ui, serif;
       position: relative;
       background: #000; /* fallback color */
@@ -36,8 +39,8 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      filter: grayscale(100%); /* B/W effect */
-      opacity: 75%;
+      filter: grayscale(100%);
+      opacity: 0.75;
       z-index: -1; /* behind text */
     }
 
@@ -54,44 +57,44 @@
       padding: 0 1rem;
     }
 
-       /* Email link styling */
+    /* Email link styling - stroke width inherited, color stays white */
     .text a {
-      color: #ffffff;
-         -webkit-text-stroke: 1.5px #ffffff;
+      color: #ffffff; /* fill color */
+      -webkit-text-stroke-width: inherit; /* match parent stroke width */
+      -webkit-text-stroke-color: #ffffff; /* keep stroke white */
       text-decoration: none;
     }
 
-    /* Responsive adjustments */
+    /* Responsive adjustments - font size remains large for mobile */
     @media (max-width: 1024px) {
       .text {
         top: -2%;
-      left: 1%;
+        left: 1%;
         font-size: 5.3rem;
         line-height: 1.1;
-        color: #9aff7e; /* bright color */
         -webkit-text-stroke: 4px #9aff7e;
         max-width: 95%;
       }
     }
 
     @media (max-width: 768px) {
-        .text {
-           top: -10%;
-      left: 1%;
+      .text {
+        top: -10%;
+        left: 1%;
         font-size: 5.3rem;
         line-height: 1.1;
-        -webkit-text-stroke: 6.5px #fdff7e;
+        -webkit-text-stroke: 4px #fdff7e;
         max-width: 90%;
       }
     }
 
     @media (max-width: 480px) {
-       .text {
-         top: 0%;
-      left: 1%;
+      .text {
+        top: 0%;
+        left: 1%;
         font-size: 5.3rem;
         line-height: 1.1;
-        -webkit-text-stroke: 6.5px #fdff7e;
+        -webkit-text-stroke: 4px #fdff7e;
         max-width: 90%;
       }
     }
@@ -102,11 +105,11 @@
   <div class="text">
     <p>
       Berlin based Graphic- and Information Designer with a focus on geospatial, visual narratives.
-      Currently working as part of the Data Journalism Department at Deutsche Welle
+      Currently working as part of the Data Journalism Department at Deutsche Welle.
     </p>
     <p>
-  Reach me <a href="mailto:mail@julianpeschel.info">here</a>
-</p>
+      Reach me <a href="mailto:mail@julianpeschel.info">here</a>
+    </p>
   </div>
 </body>
 </html>
