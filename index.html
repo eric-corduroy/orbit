@@ -37,6 +37,7 @@
       background-position: center;
       background-repeat: no-repeat;
       filter: grayscale(100%); /* B/W effect */
+      opacity: 75%;
       z-index: -1; /* behind text */
     }
 
@@ -48,36 +49,43 @@
       max-width: 600px;
       font-size: 1.7rem;
       line-height: 1.4;
-      color: #fdff7e; /* bright color */
-      -webkit-text-stroke: 1.5px #fdff7e;
+      color: #9aff7e; /* bright color */
+      -webkit-text-stroke: 1.5px #9aff7e;
       padding: 0 1rem;
     }
 
     /* Responsive adjustments */
     @media (max-width: 1024px) {
       .text {
-        font-size: 1.5rem;
-        max-width: 80%;
+        top: -2%;
+      left: 1%;
+        font-size: 5.3rem;
+        line-height: 1.1;
+        color: #9aff7e; /* bright color */
+        -webkit-text-stroke: 4px #9aff7e;
+        max-width: 95%;
       }
     }
 
     @media (max-width: 768px) {
-      .text {
-        font-size: 1.3rem;
+        .text {
+           top: -10%;
+      left: 1%;
+        font-size: 5.3rem;
+        line-height: 1.1;
+        -webkit-text-stroke: 6.5px #fdff7e;
         max-width: 90%;
-        top: 5%;
-        left: 5%;
       }
     }
 
     @media (max-width: 480px) {
-      .text {
-        font-size: 2.1rem;
-        line-height: 1.3;
-        top: 3%;
-        left: 3%;
-        max-width: 95%;
-        -webkit-text-stroke: 1px #fdff7e; /* thinner stroke on small screens */
+       .text {
+         top: 0%;
+      left: 1%;
+        font-size: 5.3rem;
+        line-height: 1.1;
+        -webkit-text-stroke: 6.5px #fdff7e;
+        max-width: 90%;
       }
     }
   </style>
@@ -86,8 +94,11 @@
 <body>
   <div class="text">
     <p>
-      Berlin based Graphic- und Information Designer with a focus on geospatial, visual narratives.
+      Berlin based Graphic- and Information Designer with a focus on geospatial, visual narratives.
       Currently working as part of the Data Journalism Department at Deutsche Welle.
+      <br>
+      <br>
+      Reach me here
     </p>
   </div>
 </body>
