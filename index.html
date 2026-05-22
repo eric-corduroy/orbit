@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Julian Peschel</title>
+  <link rel="icon" type="image/png" href="circle.png">
+
+  <style>
+    @font-face {
+      font-family: "VictorSerif";
+      src: url("VictorSerif-Regular.woff") format("woff");
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    /* ===============================
+       GLOBAL SCROLL LOCK (CRITICAL)
+       =============================== */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      overscroll-behavior: none;
+      touch-action: none;
+      background: #000;
+    }
+
+    body {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      font-family: "VictorSerif", system-ui, serif;
+    }
+
+    /* ===============================
+       FIXED VIEWPORT WRAPPER
+       =============================== */
+    .viewport {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100dvh; /* mobile-safe viewport height */
+      overflow: hidden;
+    }
+
+    /* ===============================
+       FIXED BACKGROUND (B/W)
+       =============================== */
+    .viewport::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: grayscale(100%);
+      opacity: 0.6;
+      z-index: 0;
+    }
+
+    /* ===============================
+       TEXT BLOCK (NON-SCROLLABLE)
+       =============================== */
+    .text {
+      position: absolute;
+      top: 0;
+      left: 1%;
+      padding: 1rem;
+
+      max-width: min(600px, 90vw);
+      max-height: 100%;
+
+      font-size: 1.7rem;
+      line-height: 1.4;
+      color: #9aff7e;
+      -webkit-text-stroke: 1.5px #9aff7e;
+
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .text p {
+      margin: 0 0 1rem 0;
+    }
+
+    /* ===============================
+       LINKS
+       =============================== */
+    .text a {
+      color: #ffffff;
+      text-decoration: none;
+      -webkit-text-stroke-width: inherit;
+      -webkit-text-stroke-color: #ffffff;
+    }
+
+    .text a:hover {
+      opacity: 0.85;
+    }
+
+    /* ===============================
+       RESPONSIVE TYPOGRAPHY
+       =============================== */
+    @media (max-width: 1024px) {
+      .text {
+        font-size: 5.3rem;
+        line-height: 1.1;
+        -webkit-text-stroke: 4px #9aff7e;
+        max-width: 95vw;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .text {
+        font-size: 5.3rem;
+        line-height: 1.1;
+        -webkit-text-stroke: 4px #fdff7e;
+        max-width: 92vw;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .text {
+        font-size: 5.3rem;
+        line-height: 1.1;
+        -webkit-text-stroke: 4px #fdff7e;
+        max-width: 90vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="viewport">
+    <div class="text">
+      <p>
+        Berlin-based Graphic and Information Designer with a focus on
+        <a href="http://www.geospatial-narratives.info" target="_blank">
+          Geospatial Narratives.
+        </a>
+        In addition to my freelance practice, I engage with satellite data at 
+        <a href="https://www.dw.com/en/data/t-43091100" target="_blank">
+          Deutsche Welle,
+        </a>
+        develop projects as part of
+        <a href="https://froh.ngo/" target="_blank">Froh!</a>
+        and occasionally contribute through
+        <a href="https://docs.google.com/spreadsheets/d/1vINlEJ-8rhHHerAd_wRcD8zF-6rzrfLsRDZLe-0ZnqQ/edit?usp=sharing" target="_blank">
+          teaching and lectures.
+      </p>
+
+      <p>
+        See
+        <a href="https://www.are.na/eric-corduroy/orbit-dughuxuv1v0" target="_blank">
+          projects
+        </a>
+        or reach me
+        <a href="mailto:mail@julianpeschel.info">here</a>
+        and
+        <a href="https://www.instagram.com/eric.corduroy" target="_blank">
+          there.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
